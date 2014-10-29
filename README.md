@@ -1,5 +1,4 @@
 # opencontig
-===========
 
 ## Description
 
@@ -13,3 +12,4 @@ It's perfect for quickly optimizing files that are continuously becoming fragmen
 * Fragmentation analysis of files and folders
 * Defragmentation of files or folder
 * Fragmentation of files or folder (yep, I know, but it can be useful)
+* OS support: Windows XP or later. 
