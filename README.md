@@ -4,10 +4,5 @@ opencontig.exe is a CLI Windows tool to defragment (and fragment) files and fold
 
 It's perfect for quickly optimizing files that are continuously becoming fragmented, or that you want to ensure are in as few fragments as possible. 
 
-## Features
+Find further details here: http://navascues.github.io/opencontig/
 
-* Free space fragmentation analysis of volumes
-* Fragmentation analysis of files and folders
-* Defragmentation of files or folder
-* Fragmentation of files or folder (yep, I know, but it can be useful)
-* OS support: Windows XP or later. 
