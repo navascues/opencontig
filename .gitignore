@@ -5,3 +5,6 @@
 *.pdb
 *.idb
 *.ilk
+*.suo
+*.opensdf
+*.sdf
