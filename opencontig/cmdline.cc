@@ -68,7 +68,7 @@ void CmdLine::print_header()
 void CmdLine::print_usage()
 {
 	wprintf(
-		L" Usage: freecontig.exe [action] [parameter]\n"
+		L" Usage: opencontig.exe [action] [parameter]\n"
 		L"\n"
 		L" Actions:\n"
 		L"\t %s [file or folder]\n"
