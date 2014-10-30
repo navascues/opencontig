@@ -18,6 +18,8 @@ limitations under the License.
 
 static const wchar_t* kFreeContigVersion = L"v1.0";
 static const wchar_t* kFreeContigEmail = L"<julian.navascues@outlook.com>";
+
+const wchar_t* kParamQuiet = L"-quiet";
 const wchar_t* kParamAnalyzeFile = L"-analyze";
 const wchar_t* kParamDefragFile = L"-defrag";
 const wchar_t* kParamFragmentFile = L"-fragment";
@@ -68,7 +70,11 @@ void CmdLine::print_header()
 void CmdLine::print_usage()
 {
 	wprintf(
-		L" Usage: opencontig.exe [action] [parameter]\n"
+		L" Usage: opencontig.exe [options] [action] [parameter]\n"
+		L"\n"
+		L" Options:\n"
+		L"\t %s \n"
+		L"\t\t Doesn't print the processed file list.\n"
 		L"\n"
 		L" Actions:\n"
 		L"\t %s [file or folder]\n"
@@ -95,6 +101,7 @@ void CmdLine::print_usage()
 		L"\t\t leading to a slower access for the split files.\n"
 		L"\t\t (Administrator rights are required)\n"
 		L"\n",
+			kParamQuiet,
 			kParamAnalyzeFile,
 			kParamFreeAreaAnalysis,
 			kParamDefragFile,

@@ -196,14 +196,17 @@ VOID Defragmenter::apply_action(FileInfo *f)
 		
 		if (f->frag_count() > 1) 
 		{
-			wcout << f->fullpath() << L" is in " << f->frag_count() << L" fragments" << endl;
+			if (!quiet_)
+				wcout << f->fullpath() << L" is in " << f->frag_count() << L" fragments" << endl;
 
 			frag_count_before_ += f->frag_count();
 
 		} else 
 		{
 			frag_count_before_++;
-			wcout << f->fullpath() << L" is defragmented" << endl;
+			
+			if (!quiet_)
+				wcout << f->fullpath() << L" is defragmented" << endl;
 		}
 
 		break;

@@ -30,22 +30,22 @@ int wmain(int argc, wchar_t* argv[])
 	{
 		if (c.is_param(kParamAnalyzeFile) && (file_or_folder = c.get_param(kParamAnalyzeFile))) {
 			// Analyze option 
-			Defragmenter d(wstring(file_or_folder), false, kAnalyze);
+			Defragmenter d(wstring(file_or_folder), c.is_param(kParamQuiet), kAnalyze);
 			d.run();
 		}
 		else if (c.is_param(kParamDefragFile) && (file_or_folder = c.get_param(kParamDefragFile))) {
 			// Defragmentation
-			Defragmenter d(wstring(file_or_folder), false, kDefragment);
+			Defragmenter d(wstring(file_or_folder), c.is_param(kParamQuiet), kDefragment);
 			d.run();
 		}
 		else if (c.is_param(kParamFragmentFile) && (file_or_folder = c.get_param(kParamFragmentFile))) {
 			// Fragmentation
-			Defragmenter d(wstring(file_or_folder), false, kFragment);
+			Defragmenter d(wstring(file_or_folder), c.is_param(kParamQuiet), kFragment);
 			d.run();
 		}
 		else if (c.is_param(kParamFreeAreaAnalysis) && (file_or_folder = c.get_param(kParamFreeAreaAnalysis))) {
 			// Frea area analysis
-			Defragmenter d(wstring(file_or_folder), false, kFreeAreaAnalysis);
+			Defragmenter d(wstring(file_or_folder), c.is_param(kParamQuiet), kFreeAreaAnalysis);
 			d.run();
 		}
 		else

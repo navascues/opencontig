@@ -19,6 +19,7 @@ limitations under the License.
 #include <vector>
 using namespace std;
 
+extern const wchar_t* kParamQuiet;
 extern const wchar_t* kParamAnalyzeFile;
 extern const wchar_t* kParamDefragFile;
 extern const wchar_t* kParamFragmentFile;
