@@ -54,6 +54,97 @@
 </ul>
 
 <h3>
+<a name="License" class="anchor" href="#License"><span class="octicon octicon-link"></span></a>Usage: a real session example </h3>
+
+<h4>Analyzing the fragmentation of a folder:</h4>
+
+<pre><code>C:\>opencontig -analyze Folder
+
+OpenContig v1.0 File defragmentation/fragmentation tool.
+Copyright (c) 2013 <julian.navascues@outlook.com>
+
+C:\Folder\IE10-Windows6.1-x64-es-es.exe is defragmented
+C:\Folder\npp.6.6.9.Installer.exe is defragmented
+C:\Folder\SubFolderA\GitHubSetup.exe is defragmented
+C:\Folder\SubFolderA\VirtualBox-4.3.18-96516-Win.exe is defragmented
+C:\Folder\SubFolderB\Git-1.9.4-preview20140929.exe is defragmented
+C:\Folder\SubFolderB\VirtualBox-4.2.26-95022-Win.exe is defragmented
+C:\Folder\SubFolderC\semantic.zip is defragmented
+C:\Folder\SubFolderC\white_noise.msi is defragmented
+C:\Folder\SubFolderD\IE11-Windows6.1.exe is defragmented
+C:\Folder\SubFolderD\Windows6.1-KB2639308-x64.cab is defragmented
+
+Number of files processed: 10
+Average fragmentation:     1 frags/file
+</code></pre>
+
+<h4>Ok, the folder is defragmented. Let's fragment it: </h4>
+
+<pre><code>C:\>opencontig.exe -fragment Folder
+
+OpenContig v1.0 File defragmentation/fragmentation tool.
+Copyright (c) 2013 <julian.navascues@outlook.com>
+
+Processing C:\Folder\IE10-Windows6.1-x64-es-es.exe...
+Processing C:\Folder\npp.6.6.9.Installer.exe...
+Processing C:\Folder\SubFolderA\GitHubSetup.exe...
+Processing C:\Folder\SubFolderA\VirtualBox-4.3.18-96516-Win.exe...
+Processing C:\Folder\SubFolderB\Git-1.9.4-preview20140929.exe...
+Processing C:\Folder\SubFolderB\VirtualBox-4.2.26-95022-Win.exe...
+Processing C:\Folder\SubFolderC\semantic.zip...
+Processing C:\Folder\SubFolderC\white_noise.msi...
+Processing C:\Folder\SubFolderD\IE11-Windows6.1.exe...
+Processing C:\Folder\SubFolderD\Windows6.1-KB2639308-x64.cab...
+
+Number of files processed: 10
+Average fragmentation before:     1 frags/file
+Average fragmentation after:      7865.9 frags/file</code></pre>
+
+<h4>That's what I call fragmentation. Let's analyze it:</h4>
+
+<pre><code>C:\>opencontig.exe -analyze Folder
+
+OpenContig v1.0 File defragmentation/fragmentation tool.
+Copyright (c) 2013 <julian.navascues@outlook.com>
+
+C:\Folder\IE10-Windows6.1-x64-es-es.exe is in 11329 fragments
+C:\Folder\npp.6.6.9.Installer.exe is in 1940 fragments
+C:\Folder\SubFolderA\GitHubSetup.exe is in 166 fragments
+C:\Folder\SubFolderA\VirtualBox-4.3.18-96516-Win.exe is in 26683 fragmen
+C:\Folder\SubFolderB\Git-1.9.4-preview20140929.exe is in 4352 fragments
+C:\Folder\SubFolderB\VirtualBox-4.2.26-95022-Win.exe is in 25864 fragmen
+C:\Folder\SubFolderC\semantic.zip is in 611 fragments
+C:\Folder\SubFolderC\white_noise.msi is in 5948 fragments
+C:\Folder\SubFolderD\IE11-Windows6.1.exe is in 508 fragments
+C:\Folder\SubFolderD\Windows6.1-KB2639308-x64.cab is in 1258 fragments
+
+Number of files processed: 10
+Average fragmentation:     7865.9 frags/file</code></pre>
+
+<h4>This folder needs a defragmenter!</h4>
+
+<pre><code>C:\>opencontig.exe -defrag Folder
+
+OpenContig v1.0 File defragmentation/fragmentation tool.
+Copyright (c) 2013 <julian.navascues@outlook.com>
+
+Processing C:\Folder\IE10-Windows6.1-x64-es-es.exe...
+Processing C:\Folder\npp.6.6.9.Installer.exe...
+Processing C:\Folder\SubFolderA\GitHubSetup.exe...
+Processing C:\Folder\SubFolderA\VirtualBox-4.3.18-96516-Win.exe...
+Processing C:\Folder\SubFolderB\Git-1.9.4-preview20140929.exe...
+Processing C:\Folder\SubFolderB\VirtualBox-4.2.26-95022-Win.exe...
+Processing C:\Folder\SubFolderC\semantic.zip...
+Processing C:\Folder\SubFolderC\white_noise.msi...
+Processing C:\Folder\SubFolderD\IE11-Windows6.1.exe...
+Processing C:\Folder\SubFolderD\Windows6.1-KB2639308-x64.cab...
+
+Number of files processed: 10
+Average fragmentation before:     7865.9 frags/file
+Average fragmentation after:      1 frags/file</code></pre>
+
+
+<h3>
 <a name="License" class="anchor" href="#License"><span class="octicon octicon-link"></span></a>License</h3>
 
 <p>opencontig is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License, Version 2.0</a>.</p>
