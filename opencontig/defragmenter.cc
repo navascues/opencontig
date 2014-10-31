@@ -240,6 +240,9 @@ VOID Defragmenter::apply_action(FileInfo *f)
 		{
 			if (quiet_) // Show file on error
 				wcout << L"Processing " << f->fullpath() << "..." << endl;
+
+			frag_count_before_ += f->frag_count();
+			frag_count_after_ += f->frag_count();
 			
 			wcout << L"Not enough free contiguous space for " << f->cluster_count() << L" clusters. File keeps its " << f->frag_count() << L" fragments." << endl;
 		}
