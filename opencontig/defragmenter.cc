@@ -128,7 +128,10 @@ VOID Defragmenter::run()
 		if (f.is_folder())
 			recursive_search(file_or_folder_);
 		else
+		{ 
+			processed_files_count_++;
 			apply_action(&f);
+		}
 
 		wcout << endl;
 		wcout << L"Number of files processed: " << processed_files_count_ << endl;
@@ -171,10 +174,13 @@ VOID Defragmenter::recursive_search (wstring folder)
 
 		try {
 			FileInfo *f = new FileInfo(subpath);
+
 			apply_action(f);
+			processed_files_count_++;
 			delete f;
 		}
 		catch (SystemException *e) {
+
 			wcout << L"Warning: " << e->message();
 			wcout << L"Skipping file: " << subpath << endl;
 			delete e;
@@ -187,7 +193,6 @@ VOID Defragmenter::recursive_search (wstring folder)
 
 VOID Defragmenter::apply_action(FileInfo *f)
 {
-	processed_files_count_++;
 
 	switch (action_)
 	{
